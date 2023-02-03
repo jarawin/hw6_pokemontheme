@@ -14,11 +14,15 @@ class PokemonDetail extends StatelessWidget {
       builder: (context, AsyncSnapshot<PokemonInfo> snapshot) {
         if (snapshot.hasData) {
           return Scaffold(
-            appBar: AppBar(title: Text(capitalize(snapshot.data!.name)),),
+            appBar: AppBar(
+              title: Text(capitalize(snapshot.data!.name)),
+            ),
             body: Column(
               children: [
                 Image.network(genPokemonImageUrl(pokemonId)),
-                Text("NAME: ${capitalize(snapshot.data!.name)}",),
+                Text(
+                  "NAME: ${capitalize(snapshot.data!.name)}",
+                ),
                 Text("TYPES: ${snapshot.data!.typesToString()}"),
                 Text("ABILITY: ${capitalize(snapshot.data!.ability)}"),
                 IconButton(
@@ -34,12 +38,13 @@ class PokemonDetail extends StatelessWidget {
           );
         } else {
           return Scaffold(
-            appBar: AppBar(title: const Text(''),),
+            appBar: AppBar(
+              title: const Text(''),
+            ),
             body: const CircularProgressIndicator(),
           );
         }
       },
     );
   }
-
 }

@@ -17,7 +17,8 @@ class _PokemonCounterState extends State<PokemonCounter> {
       builder: (_, pokemonService, __) {
         return Scaffold(
           appBar: AppBar(
-            title: const Text('Pokemon Count'),
+            title: const Text('Pokemon Count',
+                style: TextStyle(color: Colors.white)),
           ),
           body: const Center(
             child: Count(),

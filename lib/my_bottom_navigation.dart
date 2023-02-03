@@ -10,8 +10,8 @@ class MyBottomNavigation extends StatefulWidget {
 }
 
 class _MyBottomNavigationState extends State<MyBottomNavigation> {
-
   int _currentIndex = 0;
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
